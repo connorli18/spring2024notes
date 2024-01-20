@@ -75,7 +75,7 @@
 
 #### [7] Flexibility and Efficiency of Use
 
-- **Definition:** Accerlators - unseen by the novice user - may often speed up the interaction for the expert. Allow useres to tailor frequent actions.
+- **Definition:** Accelerators - unseen by the novice user - may often speed up the interaction for the expert. Allow useres to tailor frequent actions.
 - **Classical Example**
   - Fast Typing via swiping on the Iphone
   - Keyboard shortcuts
