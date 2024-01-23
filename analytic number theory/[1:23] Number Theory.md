@@ -122,3 +122,18 @@ $$
 \sin(\pi z) &= e^C \cdot z \cdot \prod_{n=1}^\infty \left(1-\frac{z^2}{n^2}\right)
 \end{align*}
 $$
+**Theorem (Euler):** We want to show that
+$$
+\zeta(2) = \frac{\pi^2}{6}
+$$
+**Proof:** 
+$$
+\begin{align*}
+\sin(\pi z) &= \pi z \cdot (1-z^2) \cdot \left(1-\frac{z^2}{4}\right) \cdot \left(1-\frac{z^2}{9}\right) \cdot \left(1-\frac{z^2}{16}\right) \cdots\\
+&= \pi \left(z - \zeta(2)z^3 + \text{``higher power of } z \text{''}\right)
+\end{align*}
+$$
+Since we know that $\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} + \cdots$ , we can show the following.
+$$
+\sin(\pi z) = \pi z - \frac{(\pi z)^3}{3!} + \text{``higher powers''} \implies \zeta(2) = \frac{\pi^2}{6}
+$$
