@@ -83,7 +83,9 @@ $$
 
 - Preserves $\circ$ such that $f(ab) = f(a)f(b)$
 
-- $f(1_R) = 1_s$ 
+- $f(1_R) = 1_s$​ 
+
+- $\Im(f) \leq S$ 
 
 **Remark:** $\Im(f) \leq S$ $\rightarrow$ $\leq$ this is a subring notation. If $x,y \in \Im(f) \implies \exists\;a,b \in R$ such that $x = f(a)$ and $y = f(b)$ $\implies f(a+b) \in \Im(f)$. 
 
