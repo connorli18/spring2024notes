@@ -88,3 +88,46 @@ We also know that $\text{Error}(x) \leq \sqrt{x}$ .
 
 - $\overline{\zeta(s)} = \zeta(\overline{s})$ 
 - Reimann also showed the functional equation $s \rightarrow 1-s$. 
+
+**Big O-Notation:** Let $f(s), g(s)$ be holomorphic function of $s$. We say that $|f(s)| << |g(s)|$ or $|f(s)| = O(|g(s)|)$ if $\exists \; c > 0$ such that $|f(s)| < c \cdot |g(s)| \; \forall\;s $. 
+
+**Theorem (Perron):** 
+$$
+\lim_{T\rightarrow\infty} \int_{C-iT}^{C+iT} y^s\;\frac{ds}{s} = \begin{cases}
+	1 + O\left(y^c \cdot \min\left(1, \frac{1}{T|\log(y)|}\right)\right) &1 > y\\
+	O\left(y^c \cdot \min\left(1, \frac{1}{T|\log(y)|}\right)\right) & 0 < y < 1
+\end{cases}
+$$
+**Cauchy Residue Theorem:** Imagine $f(z) = \text{hol}(z) + \sum_{i=1}^N \frac{c_{r_i}}{z-r_i}$ . This implies that
+$$
+\int_{\partial R} f(z)\;dz = \sum \text{res}(f(z))
+$$
+<u>Case 1</u>: If we have $\frac{1}{2\pi i} \int_{\partial R} \frac{y^s}{s} \;ds = 1$ since $y^0 = 1$​. 
+
+ ![Screenshot 2024-01-25 at 3.40.13 PM](/Users/connorli/Library/Application Support/typora-user-images/Screenshot 2024-01-25 at 3.40.13 PM.png)
+
+*Vertical Integral*: 
+$$
+\begin{align*}
+\left|\int_{-B + iT}^{-B-iT} y^s \;\frac{ds}{s}\right|  &\leq \lim_{B\rightarrow\infty}\left|\int_{-B + iT}^{-B-iT} y^{-B} \;\frac{ds}{s}\right|\\
+&= \lim_{B\rightarrow\infty} y^{-B} \int_{-T}^{T} \frac{dt}{|-B+it|} = \int_{-T}^T \frac{dt}{\sqrt{t^2 + B^2}}
+\end{align*}
+$$
+ *Horizontal Integral* (*the First Way*): 
+$$
+\begin{align*}
+\left|\int_{-B + iT}^{-B-iT} y^s \;\frac{ds}{s}\right| &< \left|\int_{-B}^C \frac{y^C}{|\sigma + it|} \right|\;d\sigma\\
+&\leq \frac{1}{T} \left|\int_{-B}^C y^\sigma \;d\sigma\right|\\
+&\leq \frac{1}{T} \frac{y^C}{???}
+\end{align*}
+$$
+*Horizontal Integral (the Second Way)*: We represent the semi-circle by $\partial C$.
+$$
+\int_{\partial C}\left| \frac{ds}{s}\right| \leq \frac{1}{r} \int_{\partial C} |ds| \leq \frac{\pi \cdot r}{r} \leq \pi
+$$
+<u>Case 2</u>: Consider $y < 1$. 
+$$
+\int_R y^s \;\frac{ds}{s} = 0
+$$
+It equals $0$ since there are no poles.
+
