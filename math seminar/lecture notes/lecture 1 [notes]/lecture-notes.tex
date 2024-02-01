@@ -1,0 +1,126 @@
+\documentclass[8pt]{extarticle} 
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{mathabx}
+\usepackage[bottom=0.5cm, right=1.5cm, left=1.5cm, top=1.5cm, headheight=16pt]{geometry}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{cancel}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\makeatletter
+\newcases{crcases}{\quad}{%
+  \hfil$\m@th\displaystyle{##}$\hfil}{\hfil$\m@th\displaystyle{##}$}{\lbrace}{.}
+\makeatother
+\usepackage{mdframed}
+\usepackage{tikzlings}
+\usepackage{tikzducks}
+
+
+\title{\textbf{[Math Seminar] Lecture 1 Notes}}
+\author{\textbf{Connor Li, csl2192}}
+\date{\textbf{February 7, 2024}}
+
+\newmdenv{boxedsection}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Top Level}
+\begin{itemize}
+    \item $[\text{H}]$ 1.6, 1.7, 2.4 over the following topics: Thin Sets of Squares, Polygonal Number Theorem, Sums of Two Cubes
+    \item Structure of the Lecture follows the textbook
+\end{itemize}
+
+
+\section{Quantitative Estimates}
+\subsection{Overview}
+\begin{itemize}
+    \item Quantitative estimates in additive number theory are mathematical calculations that provide numerical bounds or approximations for various properties and behaviors of numbers, particularly integers.
+    \begin{itemize}
+        \item ``How many primes are up to $x$?''
+        \item Greatest Prime Factor Bound: there exists a prime factor of $x$ (a composite integer) that is at most $\sqrt{x}$. 
+    \end{itemize}
+    \item Proofs involve analysis, combinatorics, algebra
+    \item Practical implications in areas like cryptography, CS, and mathematical modeling
+\end{itemize}
+\subsection{Gaussian Sum}
+\begin{boxedsection}
+\textbf{Theorem:} Find an estimator for sum of the first $n$ positive integers.
+$$
+\sum_{k=1}^{n} k = 1 + 2 + 3 + \cdots + n
+$$
+\textbf{Proof:} Following Gauss's genius, arrange all the numbers from $1$ to $n$ in a line. Then, directly below the line, arrange the numbers from $n$ to $1$ in reverse order.
+$$
+\begin{tabular}{c c c c c c}
+    1 & 2 & 3 & \dots & n-1 & n \\
+    n & n-1 & n-2 & \dots & 2 & 1
+\end{tabular}
+$$
+Notice, each vertical pair of numbers sums to $n+1$, and there are $n$ such pairs of numbers. Since each number is counted twice, Gauss deduced the following formula for the sum of the numbers.
+$$
+\sum_{i=1}^n i = \frac{n(n+1)}{2}
+$$
+\end{boxedsection}  
+\begin{itemize}
+    \item Most of time, we can get estimators/bounds with error terms (instead of exact values) like the Gaussian sum
+\end{itemize}
+\subsection{Introducing the Basis}
+\begin{boxedsection}
+\textbf{Definition:} $A$ is a \textit{basis of order $h$ for $N$} if:
+\begin{enumerate}
+    \item $A$ is a finite set of non-negative integers
+    \item Every integer $x \in \mathbb{Z}$ (where $0 \leq x \leq N$) can be written as the sum of $h$ elements of $A$, with repetitions allowed
+\end{enumerate}
+\textbf{Example:} Define $A = \{0,1,2,3\}$. $A$ is a basis of order $3$ for $N = 9$, since every integer from $0$ to $9$ can be written as $a_1 + a_2 + a_3$ where $a_i \in A$.\\
+\\
+\textbf{Corollary (1):} $|A| \geq 1$. Since $A$ must be able to sum to $0$ and all integers are defined as non-negative, then the $\{0\} \in A$.\\
+\\
+\textbf{Corollary (2):} If $A$ is a basis of order $h$ for $N$, then $A$ is a basis of order $h + 1$ for $N$. 
+\end{boxedsection}
+\pagebreak
+\subsection{Bounding the Basis}
+\begin{itemize}
+    \item Definition is important because you want to provide ``quantitative estimates'' on the cardinality of some basis $A$. 
+    \item You want to figure out the minimum number of elements needed in $A$ to be able to satisfy the definition of basis. 
+\end{itemize}
+\begin{boxedsection}
+    \textbf{Theorem:} Let $h \geq 2$. There exists a positive constant $c = c(h)$ such that, if $A$ is a basis of order $h$ for $N$, then
+    $$
+    |A| > cN^{\frac{1}{h}}
+    $$
+    \textbf{Proof:} Define $|A| = k$. That means, the number of combinations of $h$ elements from $A$ (with repetitions) is a simple combination/permutation problem. If we treat one of these combinations as a distinct sum (which it probably isn't), then we have an upper bound on $N+1$ since it includes $0$.
+    $$
+    N+1 \leq {k+h-1 \choose h} = \frac{k(k+1)\cdots(k+h-1)}{h!} \leq \frac{c_0k^h}{h!}
+    $$
+Change of variables $c = \left(\frac{h!}{c_0}\right)^{\frac{1}{h}}$ and $k = |A|$. 
+    $$
+    N < \frac{c_0k^h}{h!} \implies k > \left(\frac{h! N}{c_0}\right)^{\frac{1}{h}} \implies |A| > cN^{\frac{1}{h}}
+    $$
+    \underline{Note}: Why are we allowed to simply state that there exists some $c_0$ such that $c_0k^h \geq k^h + \text{lower order terms}$? This is because of dominance of higher degree terms in polynomials. Also, known as big $O$ notiation.
+\end{boxedsection}
+\subsection{Bound for Basis of Squares}
+Remember the following formula from Jinoo's lecture:
+\begin{boxedsection}
+    \textbf{Theorem}: Every natural number can be represented as a sum of four non-negative integer squares.
+\end{boxedsection}
+\begin{itemize}
+    \item The collection of all squares forms a basis of order $4$ for the integers. 
+    \item From the above bound, we have $c N \frac{1}{4}$, but we can find a tighter bound. Define $|Q_N|$ as the set of squares up to $N$.
+    $$
+    |Q_N| = \left\lfloor \sqrt{N} \right\rfloor + 1 > N^{\frac{1}{2}}
+    $$
+\end{itemize}
+\end{document}

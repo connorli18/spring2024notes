@@ -11,6 +11,7 @@
 \usepackage[bottom=0.5cm, right=1.5cm, left=1.5cm, top=1.5cm, headheight=16pt]{geometry}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{amsmath}
 \usepackage{physics}
 \usepackage{cancel}
 \usepackage{mathtools}
@@ -39,12 +40,6 @@
 \tableofcontents
 
 
-\section*{Notes}
-\begin{itemize}
-    \item Section 4.2, why does $8N+3$ carry across all the numbers
-    \item Section 4 -- do I need to include everything? or Can I simplify?
-\end{itemize}
-
 \pagebreak
 \section{Overview}
 This document will outline notes for the talk in the Additive Number Theory Math Seminar Section headed by Avi Zeff. The topic of this lecture is `\underline{Quantitative Estimates \& Sums of Two Cubes}'. The chapters (1.6, 1.7, 2.4) in reference for this talk are from [H] Nathanson, Melvyn B. \textit{Additive number theory.} New York: Springer, 1996. For questions or corrections to the notes, please email (csl2192@columbia.edu).
@@ -68,6 +63,8 @@ In this talk, we build off of results from the previous lectures by Jinoo and Ke
     \end{itemize}
 \end{enumerate}
 For a link to the main seminar website, please click \href{https://www.math.columbia.edu/~avizeff/additive/index.html}{here}.
+
+\pagebreak
 \section{Quantitative Estimates}
 \subsection{Introduction}
 In this section, we want to answer the question: what are quantitative estimates? \\
@@ -95,7 +92,6 @@ $$
 $$
 \end{boxedsection}
 Although this is probably a familiar proof, it gives the idea of the bound/exact formula that we are searching for when we approach problems in the rest of the section about estimators. Oftentimes, we can't get an exact formula like here, so boundedness (and a quantifiable error) is something that mathematicians strives for instead!
-\pagebreak
 \subsection{Basis of order $h$}
 Before we introduce some of the more complicated estimates in Nathanson, we should provide the following definition that will be used consistently throughout the notes. 
 \begin{boxedsection}
@@ -145,8 +141,6 @@ This is a more accurate lower bound than $cN^{\frac{1}{4}}$, as implied by the a
     \underline{Note}: This is different from the lower bound above, because we are asking about a minimal set of squares, not all squares up to $N$! 
 \end{boxedsection}
 To answer this question, we will employ the following theorem (Choi-Erdos-Nathanson).
-
-\pagebreak
 \subsection{Choi-Erdos-Nathanson}
 Before I explain why this is important to answer the question above, let's state the theorem. 
 \begin{boxedsection}
@@ -216,7 +210,7 @@ Now, let's prove an important theorem about triangle numbers. Another way to sta
 \begin{boxedsection}
     \textbf{Theorem:} Every nonnegative integer is the sum of three triangles.\\
     \\
-    \textbf{Proof:} To prove the result, it is sufficient to prove that every positive integer $8N + 3$ can be expressed as a sum of three odd squares. 
+    \textbf{Proof:} To prove the result, it is sufficient to prove that every positive integer $8N + 3$ can be expressed as a sum of three odd squares via a theorem from Jinoo's lecture. 
     \begin{align*}
         8N + 3 &= (2k_1 + 1)^2 + (2k_2 + 1)^2 + (2k_3 + 1)^2 \\
         &= 4(k_1^2 + k_2^2 + k_3^2 + k_1 + k_2 + k_3) + 3\\
@@ -313,22 +307,120 @@ All three theorems relate to the same flavor or topic that we've been convering 
 $$
 \limsup_{N\rightarrow \infty} r_{3,2}(N) = \infty
 $$
-\textbf{Proof:} 
+\end{boxedsection}
+The idea of the proof is to define some large number $N$ that satisfies the $N = x_1^3 + y_1^3$ condition, and show that there exists $(x_k, y_k)$ that also satisfiy the sum of two cubes. Then, we simply have to show that these are disjoint to complete the proof. 
+\begin{boxedsection}
+\textbf{Proof:} First, let's define two functions over variables $x,y$.
+$$
+f(x,y) = \frac{x(x^3 + 2y^3)}{x^3 - y^3} \quad \quad g(x,y) = \frac{y(2x^3 + y^3)}{x^3 - y^3}
+$$
+The reason why we've picked these two functions is because they satisfy the identity
+$$
+f(x,y)^3 - g(x,y)^3 = x^3 + y^3
+$$
+Similarly, define another set of functions over variables $u,v$. 
+$$
+F(u,v) = \frac{u(u^3 - 2v^3)}{u^3 + v^3} = f(u,-v) \quad \quad G(u,v) = \frac{v(2u^3 - v^3)}{u^3 + v^3} = g(u,-v)
+$$
+These functions satisfy the identity that
+$$
+F(u,v)^3 + G(u,v)^3 = u^3 - v^3 = f(u,-v)^3 - g(u,-v)^3 
+$$
+\end{boxedsection}
+\pagebreak
+\begin{boxedsection}
+
+    \textbf{Proof (continued):} Now, define $0< \epsilon < \frac{1}{4}$. Then, for some $0 < x_1, y_1 \in \mathbb{R}$, define $0 < \rho = \frac{y_1}{x_1} < \epsilon$. Finally, define 
+    $$
+    \begin{rcases}
+        u = f(x_1,y_1) \\
+        v = g(x_1,y_1) 
+    \end{rcases} \implies u^3 - v^3 = x_1^3 + y_1^3 > 0 
+    $$
+    Based on our definition of $\rho$, we are able to create an expression for $\frac{u}{v}$ via algebraic manipulation.
+    $$
+    \frac{u}{v} = \frac{x_1}{2y_1} \left(\frac{1 + 2\rho^3}{1+\frac{\rho^3}{2}}\right)
+    $$
+    We can also bound the right term of the product by the following inequality in order to eventually bound 
+    $$
+    1 < \frac{1 + 2\rho^3}{1+\frac{\rho^3}{2}} = 1 + \frac{3\rho^3}{2 + \rho^3} < 1 + \frac{3\rho^3}{2}
+    $$
+    This allows us to bound the $\frac{u}{v}$ term as well as the relationship between $(u,v)$ and $(x_1,y_1)$, keep this in mind for later.
+    $$
+    0 < \frac{u}{v} - \frac{x_1}{2y_1} < \frac{3}{4} \left(\frac{y_1}{x_1}\right)^2 < \frac{3\epsilon^2}{4} \implies \frac{u}{v} > \frac{x_1}{2y_1} > \frac{1}{2\epsilon} > 2
+    $$
+    Next, we define $x_2 = F(u,v)$ and $y_2 = G(u,v)$. Then, we can show that $x_2^3 + y_2^3 = u^3 - v^3 = x_1^3 + y_1^3$. Now, define some $\sigma = \frac{u}{v}$ such that $0 < \sigma < 2\epsilon < \frac{1}{2}$. Using our bound for $\frac{u}{v}$, we have
+    $$
+    \frac{x_2}{y_2} = \frac{u(u^3 - 2v^3)}{v(2u^3 - v^3)} = \frac{u}{2v}\left(\frac{1-2\sigma^3}{1-\frac{\sigma^3}{2}}\right) = \frac{u}{v} - \frac{3v}{2u}\left(\frac{\sigma}{2-\sigma^3}\right)
+    $$
+    With an adjusted bound for $\sigma$, we can deduce the following inequality, which sets a bound the relationship between $(u,v)$ and $(x_2,y_2)$.
+    $$
+    0 < \frac{\sigma}{2 - \sigma^3} < \sigma < \frac{1}{2} \implies 0 < \frac{u}{2v} - \frac{x_2}{y_2} = \frac{3v}{2u}\left(\frac{\sigma}{2-\sigma^3}\right) \leq \frac{3v}{4u} < \frac{3\epsilon}{2}
+    $$
+    Using the bounds above, we can deduce a condition on $x_1$ and $y_1$ to prove that some $x_2, y_2$ exist and satisfy the equality of summation of cubes. We can do this using the above bound,
+    $$
+    \left|\frac{x_2}{y_2} - \frac{x_1}{4y_1} \right| \leq \left|\frac{x_2}{y_2} - \frac{u}{2v}\right| + \frac{1}{2} \left|\frac{u}{v} - \frac{x_1}{2y_1}\right| < \frac{3\epsilon}{2} + \frac{3\epsilon^2}{8} < 2\epsilon
+    $$
+    By this, we can come to the conclusion that if $x_1, y_1$ are positive rational numbers such that $0 < \frac{y_1}{x_1} < \epsilon < \frac{1}{4}$, then there exists positive rational numbers $x_2, y_2$ that satisfy equality of sum of cubes. 
+    $$
+    \frac{x_2}{y_2} > \frac{x_1}{4y_1} - 2\epsilon > \frac{1}{4\epsilon} - 2\epsilon > \frac{1}{8\epsilon} > 0
+    $$
+    In fact, we can hold the final conditions to be true.
+    $$
+    x_2^3 + y_2^3 = x_1^3 + y_1^3 \quad \text{ and } \quad 0 < \frac{y_2}{x_2} < 8\epsilon \implies \left|\frac{4x_2}{y_2} - \frac{x_1}{y_1}\right| < 8\epsilon
+    $$
+    If $8\epsilon < \frac{1}{4}$, we can repeat the same logic to prove that there exists positive rational numbers $x_3$ and $x_4$ such that $x_3^3 + y_3^3 = x_2^3 + y_2^3$ and the following would be true.
+    $$
+    \left|0 < \frac{y_3}{x_3} < 8^2 \epsilon\right| \quad \text{ and } \quad \left|\frac{4x_3}{y_3} - \frac{x_2}{y_2}\right| < 8^2 \epsilon
+    $$
+    Using this repetitive process, we can deduce that if $0 < 8^{k-2}\epsilon < \frac{1}{4}$, there exists positive rational numbers $x_1, y_1, x_2, y_2, \dots, x_k , y_k$ such that $x_i^3 + y_i^3 = x_{i-1}^3 + y_{i-1}^3$ for all $i \in [2,k]$ and the following is true.
+    $$
+    0 < \frac{y_i}{x_i} < 8^{i-1}\epsilon \quad \text{ and } \quad \left|\frac{4^j x_{i+1}}{y_{i+1}} - \frac{x_i}{y_i}\right| < 8^{i-1}\epsilon \quad \text{for } i = 1,\dots,k
+    $$
+\end{boxedsection}
+Now, we have proven that there exist $k$ sets of positive rational numbers $\{x_i, y_i\}$ such that $x_i^3 + y_i^3 = x_{i-1}^3 + y_{i-1}^3$ for all $i \in [2,k]$. The second (and slightly less complex) part of the proof is to show that these sets are pairwise disjoint. 
+\begin{boxedsection}
+\textbf{Proof (continued):} From the above section, we have that the following is true.
+$$
+\left| \frac{4^j x_{i+j}}{y_{i+j}} - \frac{4^{j-1}x_{i+j-1}}{y_{i+j-1}} \right| < 4^{j-1} \cdot 8^{i+j-1} \epsilon = 8^i \cdot 32^{j-1}\epsilon
+$$
+This means that for $j = 1, \dots, k-1$, we can deduce the inequality for $1 \leq i < i + \ell \leq k$.
+\begin{align*}
+\left| \frac{4^\ell x_{i+\ell}}{y_{i+\ell}}  - \frac{x_i}{y_i}\right| &\leq \sum_{j=1}^\ell \left| \frac{4^j x_{i+j}}{y_{i+j}} - \frac{4^{j-1}x_{i+j-1}}{y_{i+j-1}} \right|\\
+&\leq 8^i\epsilon \sum_{j=1}^\ell 32^{j-1}\\
+&< 8^i 32^\ell \epsilon
+\end{align*}
+Now, assume for the sake of contradiction that $x_i = x_{i+\ell}$ and $y_i = y_{i+\ell}$ for some $\ell \geq 1$, then we have that the following is true.
+$$
+\frac{x_{i+\ell}}{y_{i+\ell}} = \frac{x_i}{y_i} \implies \frac{3x_i}{y_i} \leq (4^\ell - 1)\frac{x_i}{y_i} = \left| \frac{4^\ell x_{i+\ell}}{y_{i+\ell}}  - \frac{x_i}{y_i}\right| < 8^i32^\ell \epsilon
+$$
+From the assumption, we have a contradiction. This means that the sets $\{x_i, y_i\}$ are pairwise disjoint, and we have proven Fermat's Theorem.
+$$
+3 \leq 8^i32^\ell \epsilon < 8^{2i-1}32^\ell \epsilon^2 < 8^{2k}\epsilon^2 = 1
+$$
+If you take the common denominator $d$ for all the $x_i$'s, then we have proven Fermat's theorem via $(dx_1)^3 + (dy_1)^3 = (dx_2)^3 + (dy_2)^3 = \dots = (dx_k)^3 + (dy_k)^3 = N$ such that $r_{3,2}(N) \geq k$.
 \end{boxedsection}
 \subsection{Erdos \& Mahler's Theorem}
+To do this proof, we need four additional elemntary lemmas. Although I think that it's valuable to learn the proof, I think the technicalities of it can be left to the book.
 \begin{boxedsection}
 \textbf{Theorem:} Let $C'_2(n)$ denote the number of integers not exceeding $n$ that can be written as the sum of two positive, relatively prime integral cubes. Then, 
 $$
 C'_2(n) \gg n^{\frac{2}{3}}
 $$
-\textbf{Proof:} 
+\textbf{Proof:} If interested, please reference [H] Section 2.4, Lemmas 2.6 - 2.9 \& Theorem 2.5.
 \end{boxedsection}
+A consequence of this theorem states that many integers can be written as the sum of two positive cubes. The next question would then be, how many numbers have two essentially distinct representations in this form?
 \subsection{Hooley-Wooley Theorem}
+Hooley and Wooley's theorem is an answer to the question at the end of the previous subsection. However, to prove this, you will need to know a result from the theory of binary quadratic forms (taught by Jinoo). In fact, this proof requires an additional three lemmas, and similar to the previous theorem, the proof will be left in the textbook.
 \begin{boxedsection}
     \textbf{Theorem:} Let $D(n)$ denote the number of integers not exceeding $n$ that have at least two essentially distinct representations as the sum of two nonnegative itnegral cubes. Then,
     $$
     D(n) \ll n^{\frac{5}{9} + \epsilon}
     $$
-    \textbf{Proof:} 
+    \textbf{Proof:} If interested, please reference [H] Section 2.4, Lemmas 2.10 - 2.12 \& Theorem 2.6.
 \end{boxedsection}
+Finally, a consequence of this theorem is that almost all integers that can be represented as the sum of two positive cubes have essentially only one such representation. This follow directly from the Erdos Mahler theorem that states that there are at least $cn^{\frac{2}{3}}$ integers that can be expressed as the sum of two cubes, whereas the maximum number of integers expressed as two nonnegative cubes is only $c'n^{\frac{5}{9} + \epsilon}$.
+$$
+\lim_{n\rightarrow\infty} \frac{cn^{\frac{2}{3}}}{c'n^{\frac{5}{9} + \epsilon}} = \infty
+$$
 \end{document}

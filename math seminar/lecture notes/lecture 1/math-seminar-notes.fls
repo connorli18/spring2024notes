@@ -1,8 +1,8 @@
-PWD /Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes
+PWD /Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 1
 INPUT /usr/local/texlive/2023/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/math-seminar-notes.tex
+INPUT /Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 1/math-seminar-notes.tex
 OUTPUT math-seminar-notes.log
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/extsizes/extarticle.cls
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -556,6 +556,7 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/physics/physics.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/physics/physics.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/physics/physics.sty
@@ -1425,10 +1426,10 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathb6.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 OUTPUT math-seminar-notes.toc
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm0800.tfm
 INPUT /usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm0800.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /Users/connorli/Downloads/Some-polygonal-numbers-and-their-classical-construction.png
 INPUT /Users/connorli/Downloads/Some-polygonal-numbers-and-their-classical-construction.png
 INPUT /Users/connorli/Downloads/Some-polygonal-numbers-and-their-classical-construction.png
