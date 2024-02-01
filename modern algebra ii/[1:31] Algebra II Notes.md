@@ -152,4 +152,6 @@ $$
 
 **Examples:** 
 
-- 
+- $\{0\}, R$ are ideals in $R$ 
+- For any homomorphism, $f: R \rightarrow S$, we know that $\text{Ker}(f) \subset R$  is an ideal.
+
