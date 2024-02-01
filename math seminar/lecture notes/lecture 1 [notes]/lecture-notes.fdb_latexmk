@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1706816370 "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 1 [notes]/lecture-notes.tex" "lecture-notes.pdf" "lecture-notes" 1706816371 0
-  "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 1 [notes]/lecture-notes.tex" 1706816370 5596 b4766936b3a693194555efbc6bd1c4e9 ""
+["pdflatex"] 1706819749 "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 1 [notes]/lecture-notes.tex" "lecture-notes.pdf" "lecture-notes" 1706819750 0
+  "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 1 [notes]/lecture-notes.tex" 1706819749 5601 b864abd685e51a9c0c5cb2736619caac ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm0800.tfm" 1136768653 1536 05df9db6aeccc4eea94fec15c9024f79 ""
@@ -233,9 +233,9 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1705206871 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1705206848 7883458 f6e9493ae836a2efb38410cc398d6a8b ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "lecture-notes.aux" 1706816371 1434 f4ebbf1113756e55664e6f0bf6c80228 "pdflatex"
-  "lecture-notes.out" 1706816371 984 3a93b50c20cf7fafd3c6633a658de819 "pdflatex"
-  "lecture-notes.tex" 1706816370 5596 b4766936b3a693194555efbc6bd1c4e9 ""
+  "lecture-notes.aux" 1706819750 1434 f4ebbf1113756e55664e6f0bf6c80228 "pdflatex"
+  "lecture-notes.out" 1706819750 984 3a93b50c20cf7fafd3c6633a658de819 "pdflatex"
+  "lecture-notes.tex" 1706819749 5601 b864abd685e51a9c0c5cb2736619caac ""
   (generated)
   "lecture-notes.aux"
   "lecture-notes.log"
