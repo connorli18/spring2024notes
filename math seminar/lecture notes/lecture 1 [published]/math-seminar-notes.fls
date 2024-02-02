@@ -1,8 +1,8 @@
-PWD /Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 1
+PWD /Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 1 [published]
 INPUT /usr/local/texlive/2023/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 1/math-seminar-notes.tex
+INPUT /Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 1 [published]/math-seminar-notes.tex
 OUTPUT math-seminar-notes.log
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/extsizes/extarticle.cls
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/extsizes/extarticle.cls

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1706809253 "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 1/math-seminar-notes.tex" "math-seminar-notes.pdf" "math-seminar-notes" 1706809253 0
-  "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 1/math-seminar-notes.tex" 1706809252 33099 a2b5cdca08fee7f54759080b988d44e5 ""
+["pdflatex"] 1706823049 "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 1 [published]/math-seminar-notes.tex" "math-seminar-notes.pdf" "math-seminar-notes" 1706823050 0
+  "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 1 [published]/math-seminar-notes.tex" 1706823049 33099 a2b5cdca08fee7f54759080b988d44e5 ""
   "/Users/connorli/Downloads/Some-polygonal-numbers-and-their-classical-construction.png" 1706753776 45144 84bf4fb67b03b4b7d2ed4501adc74904 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -236,10 +236,10 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1705206871 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1705206848 7883458 f6e9493ae836a2efb38410cc398d6a8b ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "math-seminar-notes.aux" 1706809253 3205 f315348c1e96b481c059fea2bf2246c2 "pdflatex"
-  "math-seminar-notes.out" 1706809253 3308 e3cbe7ea68d15408b7b3a29228083040 "pdflatex"
-  "math-seminar-notes.tex" 1706809252 33099 a2b5cdca08fee7f54759080b988d44e5 ""
-  "math-seminar-notes.toc" 1706809253 1754 acfa5e17dae5947be5b1c2388668edde "pdflatex"
+  "math-seminar-notes.aux" 1706823050 3205 f315348c1e96b481c059fea2bf2246c2 "pdflatex"
+  "math-seminar-notes.out" 1706823050 3308 e3cbe7ea68d15408b7b3a29228083040 "pdflatex"
+  "math-seminar-notes.tex" 1706823049 33099 a2b5cdca08fee7f54759080b988d44e5 ""
+  "math-seminar-notes.toc" 1706823050 1754 acfa5e17dae5947be5b1c2388668edde "pdflatex"
   (generated)
   "math-seminar-notes.aux"
   "math-seminar-notes.log"

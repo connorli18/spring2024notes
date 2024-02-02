@@ -122,6 +122,158 @@ Remember the following formula from Jinoo's lecture:
     $$
     |Q_N| = \left\lfloor \sqrt{N} \right\rfloor + 1 > N^{\frac{1}{2}}
     $$
-    
+    \item This allows us to ask if this trend is continued writ large, i.e. if there's a better quantitative estimate for the growth rate of $A_N$ with respect to $N$?
 \end{itemize}
+\begin{boxedsection}
+    \textbf{Question:} We ask that if $A_N$ represents the basis of order $4$ for $N$, if 
+    $$
+    \lim_{N\rightarrow\infty} \frac{|A_N|}{N^{\frac{1}{2}}} = 0
+    $$
+\end{boxedsection}
+\subsection{Choi-Erdos-Nathanson Theorem}
+If this theorem holds true, then we can conclude that there does exist such an $A_N$ as a result to the above question in Section $3.5$.
+$$
+\lim_{N\rightarrow\infty} \frac{|A_N|}{N^{\frac{1}{2}}} \leq \frac{4}{\log 2} \cdot \left( \lim_{N\rightarrow\infty}  \frac{N^{\frac{1}{3}} \log N }{N^{\frac{1}{2}}} \right) = 0 
+$$
+\begin{boxedsection}
+    \textbf{Proof:} The sets $A_2 = A_3 = \{0, 1\}$ and $A_4 = A_5 = \{0,1,4\}$ all satisfy the theorem (this you can check for yourself). So, for this proof, we will focus on the scenario where $N \geq 6$. \\
+    \\
+    We start by defining $2$ sets. Notice that the careful choosing of these sets is what gives us the $N^{\frac{1}{3}}$ bound in the theorem statement. $A_N^{(1)}$ which consists of all the squares of positive integers up to $2N^{\frac{1}{3}}$. We know, that at maximum, the cardinality of $A_N^{(1)}$ is
+    $$
+    |A_N^{(1)}| \leq 2N^{\frac{1}{3}} + 1
+    $$
+Now define $A^{(2)}_N$ which contains all the squares of the integers of form $\left[k^{\frac{1}{2}}N^{\frac{1}{3}}\right]$ or $\left[k^{\frac{1}{2}}N^{\frac{1}{3}}\right] - 1$ where $4 \leq k \leq N^{\frac{1}{3}}$. This means that the cardinality of $A^{(2)}_N$ is upper-bounded by
+    $$
+    |A^{(2)}_N| \leq 2(N^{\frac{1}{3}} - 3) = 2N^{\frac{1}{3}} - 6. 
+    $$
+    If we define some union of these two sets $A^{(0)}_N$ such that $A^{(0)}_N = A^{(1)}_N \cup A^{(2)}_N$, then we set the upper-bound as
+$$
+    |A^{(0)}_N| < 4N^{\frac{1}{3}}
+$$
+By Lagrange's Theorem (from Avi's lecture) and the fact that our set contains every square up to $4N^{\frac{2}{3}}$, we know that every non-negative integer up to the nearest integer $4N^{\frac{2}{3}}$ can be expressed as the sum of four squares in $A_N^{(0)}$ by how we defined the set. Thus, we just have to prove that all integers between $4N^{\frac{2}{3}}$ and $N$ can be expressed as the sum of four squares in $A_N^{(0)}$.\\
+\\
+Now, a key takeaway from Jinoo's lecture is that if $\ell$ is a non-negative integer and $\ell \equiv 1 \text{ or } 2 \;\text{(mod 4)}$, then $\ell$ is the sum of three squares (which also means that it is the sum of four squares including $0$). Since the square of an even integer is $0 \text{ mod } 4$ and the square of an odd integer is $1 \text{ mod } 4$, then we have can deduce the following. If some integer $m \nequiv 0 \text{ mod } 4$ and $a$ is any positive integer such that $a^2 \leq m$, then either $m-a^2$ or $m-(a-1)^2$ is the sum of three squares. This is because $m$ must equal $1,2,3 \text{ mod }4$ and $a^2$ or $(a-1)^2$ must equal $0,1 \text{ mod } 4$. So in each case, you are able to reduce $m-a^2$ or $m-(a-1)^2$ to some $\ell$ such that $\ell \equiv 1 \text{ or } 2 \text{ mod } 4$, which is also the sum of three squares.\\
+\\
+As a result, we simply need to prove that for any $m \in \mathbb{Z}$ such that $4N^{\frac{2}{3}} < m \leq N$ and $m \nequiv 0 \text{ mod } 4$, then $m-a_0^2$ is the sum of three squares in $A_N^{(0)}$. Keep in mind, that we can ignore the case where $m \equiv 0 \text{ mod 4}$ via the blurb at the end of Jinoo's lecture, since $(2x_1)^2 + (2x_2)^2 + (2x_3)^2 + (2x_4)^2 = 4(x_1^2 + x_2^2 + x_3^2 + x_4^2)$, which means we can keep factoring out $2$'s until it reduces to a scenario where $m \nequiv 0 \text{ mod } 4$ or $m < 4 N^{\frac{1}{3}}$. \\
+\\
+So, the goal is to prove that an integer $a_0 \in A_N^{(2)}$ exists such that $0 \leq m-a_0^2 \leq 4N^{\frac{2}{3}}$ and $m-a_0^2$ is the sum of three squares. Start by defining some term $a$ such that $a^2, (a-1)^2 \in A^{(2)}_N$. To do this, define $k$ as follows.
+$$
+4 N^{\frac{2}{3}} < m \leq N \implies 4 \leq k = \left[\frac{m}{N^{\frac{2}{3}}}\right] \leq N^{\frac{1}{3}}
+$$
+Once you've defined such a $k$, set the following value for $a$ so that its corresponding squares are in the desired set. 
+$$
+a = \left[k^{\frac{1}{2}}N^{\frac{1}{3}}\right] \implies a^2, (a-1)^2 \in A_N^{(2)}
+$$
+Since we are dealing with ``the closest integers'', we can deduce the following results as well.
+$$
+a^2 \leq kN^{\frac{2}{3}} \leq m < (k+1)N^{\frac{2}{3}} \quad \text{ and } \quad a > k^{\frac{1}{2}}N^{\frac{1}{3}} - 1
+$$
+This is useful because we can now pick some $a_0^2 \in \{(a-1)^2, a^2\}$ such that $m-a_0^2$ is a sum of three squares from our earlier remark that is also in the set $A^{(1)}_N$. Now, we know that if $m \nequiv 0 \text{ mod } 4$ and $0 \leq m \leq N$, then $m$ is a sum of four squares. \\
+\\
+The last check we need to do is for the scenario where $m \equiv 0 \text{ mod } 4$. Remember that we can divide out powers of $2^i$ until we reach some familiar $m$, then apply the logic above. However, to account for that division, we need to explicitly construct the set $A_N$ as follows.
+$$
+A_N = \left\{(2^ia)^2 : 0 \leq i \leq \log_4(N) \quad \text{ and } \quad a \in A_N^{(0)}\right\}
+$$
+This way, we can account for all $m$, and we simply have to solidify the logic for our bound. An important note is the constructed $A_N^{(0)}$ is a subset of this $A_N$.
+$$
+|A_N| \leq \left(\log_4(N) + 1\right)|AN^{(0)}| < \left(2\log_4(N)\right)|AN^{(0)}| = \frac{4}{\log (2)} N^{\frac{1}{3}} \log(N)
+$$
+\end{boxedsection}
+
+\pagebreak
+\section{Polygonal Number Theorem}
+\subsection{Introduction}
+Square integers are consider quadrilateral numbers. Now, let's talk about other $n$-gonal numbers.
+\subsection{Visual Understanding}
+\begin{center}
+    \includegraphics[width=10cm]{/Users/connorli/Downloads/Some-polygonal-numbers-and-their-classical-construction.png}
+\end{center}
+\subsection{Triangle Theorem}
+\begin{boxedsection}
+    \textbf{Theorem:} Every nonnegative integer is the sum of three triangles.\\
+    \\
+    \textbf{Proof:} To prove the result, it is sufficient to prove that every positive integer $8N + 3$ can be expressed as a sum of three odd squares via a theorem from Jinoo's lecture. 
+    \begin{align*}
+        8N + 3 &= (2k_1 + 1)^2 + (2k_2 + 1)^2 + (2k_3 + 1)^2 \\
+        &= 4(k_1^2 + k_2^2 + k_3^2 + k_1 + k_2 + k_3) + 3\\
+    \end{align*}
+    Rearranging the terms, we have the following result.
+    $$
+    N = \frac{k_1(k_1+1)}{2} + \frac{k_2(k_2+1)}{2} + \frac{k_3(k_3+1)}{2}
+    $$
+    This completes the proof of every $N$ being able to be expressed as the sum of $3$ triangular numbers.
+\end{boxedsection}
+\subsection{Constructing Intervals}
+\begin{itemize}
+    \item Specifically, the formula for the $k$th polygonal number of order $m+2$ for $m \geq 3$ is 
+$$
+p_m(k) = \frac{m \cdot k(k-1)}{2} + k
+$$
+\item Using this formula, our goal is construct a basis of order $h$ for any integer $N$ using the polygonal numbers. Essentially, we want to be able to express the integers from $0$ to $N$ as the sum of $h$-gonal numbers all of order $m+2$.
+\item Let's imagine $k_1, \dots, k_s$ are positive integers. Then for $r \in [0,m+2-s]$ where $r \in \mathbb{Z}$, we have that the following linear combination of polygonal numbers (of order $m+2$) creates an interval of $m+3-s$ consecutive integers. 
+$$
+p_m(k_1) + p_m(k_2) + \dots + p_m(k_s) + rp_m(1)
+$$
+\item Look in Section 4.4, but you can construct intervals of length $m - 2$. 
+$$
+\begin{tabular}{| c | c | c |}
+\hline
+\text{Expression} & \text{Min Range} & \text{Max Range}\\
+\hline
+$rp_m(1)$ & $0$ & $m+2$ \\
+$p_m(2) + rp_m(1)$ & $m+2$ & $2m+3$ \\
+$2p_m(2) + rp_m(1)$ & $2m+3$ & $3m+4$ \\
+\vdots & \vdots & \vdots \\
+$p_m(5) + p_m(2) + rp_m(1)$ & $11m+7$ & $12m+8$ \\
+\hline
+\end{tabular}
+$$
+\item Two more important theorems for $N > 120m$ since the extension of the table only applies there. Look in the notes to find out more, but there are good or close upper bounds on those.
+\end{itemize}
+
+
+
+\pagebreak
+\section{Sums of Two Cubes}
+\subsection{Precursors}
+\begin{itemize}
+    \item Remember from last lecture $G(3)$, which is the the smallest number of cubes such that any sufficiently large nonnegative integer can be written as a sum of cubes.
+    \item $r_{3,2}(N)$ is the number of ways to write $2$ cubes as points $(x,y)$ for any sum $N$
+    \item $N$ has two distinct representations if $r_{3,2}(N) \geq 3$.
+    \item $1729 = 1^3 + 12^3 = 9^3 + 10^3$ is the smallest number with two distinct representations.
+    \item $87,539,319 = 167^3 + 436^3 = 228^3 + 423^3 = 255^3 + 414^3$
+\end{itemize}
+We will present $3$ theorems and a corollary related to this.
+\subsection{Fermat's Theorem}
+In this section, we will present three theorems on the sums of two cubes. \\
+\\
+\textbf{Fermat's Result:} The first is Fermat's result that there are integers with arbitrarily many representations as the sum of two cubes.
+$$
+\lim_{N\rightarrow\infty} r_{3,2}(N) = \infty
+$$
+\begin{boxedsection}
+\textbf{Proof:} Involves defining $x_1, y_1$ as rational numbers. Then, you prove that for a large enough $N$, there must exists some $x_2, y_2$ such that $N = x_1^3 + y_1^3 = x_2^3 + y_2^3$. Repeating iterations with increasing $x_i,y_i$ approaching the bound for $x_1,y_1$ you get that there are infinitely many representations of $N$ as a cubic. \\
+\\
+The next step to prove that these are pairwise independnet is a little more complicated, but it's a proof by contradiction using the bounds. \\
+\\
+Finally, you turn the rational $x_i, y_i$ from $i = 1, \dots, k$ into natural numbers by multiplying them by a common denominator, which completes your proof.
+\end{boxedsection}
+\subsection{Other Theorems}
+\textbf{Erdos \& Mahler's Theorem:} First, define $C_2(n)$ to be the number of integers up to $n$ that can be represented as the sum of two positive cube. We can then upperbound $Q(n)$, which represents the number of cubes up to $n$, by the following $Q(n) < n^{\frac{1}{3}}$. This allows us to bound $C_2(n) < n^{\frac{1}{3}} \cdot n^{\frac{1}{3}} = n^{\frac{2}{3}}$. \\
+\\
+This theorem then states that the growth rate of $C_2(n)$ is captured asymptopically by $n^{\frac{2}{3}}$. More formally, this means that there exists some $c$ such that for all $n > n_0$, we have that $C_2(n) < c \cdot n^{\frac{2}{3}}$.
+$$
+C_2(n) = \sum_{\substack{N \leq n \\ r_{3,2}(N) \geq 1}} 1 \gg n^{\frac{2}{3}}
+$$
+\textbf{Hooley-Wooley's Theorem:} If $C^*_2(n)$ is the number of integers up to $n$ with two distinct representations, then the following is true.
+$$
+C^*_2(n) \ll n^{\frac{5}{9} + \epsilon}
+$$
+All three theorems relate to the same flavor or topic that we've been convering throughout the lecture, one related to a quantitative estimate over a difficult counting problem related to additive number theory. That being said, let's jump into the proofs.
+\subsection{Last Corollary}
+All integers that can be represented as the sum of two positive cubes have essentially only one such representation. This follow directly from the Erdos Mahler theorem that states that there are at least $cn^{\frac{2}{3}}$ integers that can be expressed as the sum of two cubes, whereas the maximum number of integers expressed as two nonnegative cubes is only $c'n^{\frac{5}{9} + \epsilon}$.
+$$
+\lim_{n\rightarrow\infty} \frac{cn^{\frac{2}{3}}}{c'n^{\frac{5}{9} + \epsilon}} = \infty
+$$
+
 \end{document}

@@ -1426,6 +1426,11 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT /Users/connorli/Downloads/Some-polygonal-numbers-and-their-classical-construction.png
+INPUT /Users/connorli/Downloads/Some-polygonal-numbers-and-their-classical-construction.png
+INPUT /Users/connorli/Downloads/Some-polygonal-numbers-and-their-classical-construction.png
+INPUT /Users/connorli/Downloads/Some-polygonal-numbers-and-their-classical-construction.png
+INPUT /Users/connorli/Downloads/Some-polygonal-numbers-and-their-classical-construction.png
 INPUT lecture-notes.aux
 INPUT ./lecture-notes.out
 INPUT ./lecture-notes.out
