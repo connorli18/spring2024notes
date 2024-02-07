@@ -6,3 +6,4 @@ Classes:
 = Modern Algebra - Konstantin Aleshkin
 = Math Seminar - Avi Zeff
 = Analytic Number Theory - Dorian Goldfeld
+
