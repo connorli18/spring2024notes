@@ -98,7 +98,7 @@ $$
 
 - $F(x) \nrightarrow^{\text{ev}} F^F$ because $g$​ can have roots.
 
-**Remark:** $\mathbb{Q}(\sqrt{2}) = \Im(\text{ev}_{sqrt{2}}), \text{ev}_{\sqrt{2}} \cdot \mathbb{Q} \rightarrow \mathbb{R}$, evaluate polynomial with rational coefficients at $\mathbb{R}$ 
+**Remark:** $\mathbb{Q}(\sqrt{2}) = \Im(\text{ev}_{\sqrt{2}}), \text{ev}_{\sqrt{2}} \cdot \mathbb{Q} \rightarrow \mathbb{R}$, evaluate polynomial with rational coefficients at $\mathbb{R}$ 
 $$
 \Im(\text{ev}_s) := R[x] \leq S
 $$
@@ -141,7 +141,7 @@ $$
 
 **Definition:** A subset $I \subset R$ is called an <u>ideal</u> if:
 
-1. It is an abelian subgroup of $(\mathbb{R}, +)$​ 
+1. It is an abelian subgroup of $(R, +)$​ 
 2. Closed under multiplication "$\circ$"
 3. Absorbs multiplication
 

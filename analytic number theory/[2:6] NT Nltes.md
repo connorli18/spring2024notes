@@ -6,7 +6,7 @@
 
 **Definition:** Fourier transform is defined as follows.
 $$
-\hat{f}(y) = \int_{-\infty}^\infty f(t) e^{-2\pi i ty}\;dy
+\hat{f}(y) = \int_{-\infty}^\infty f(t) e^{-2\pi i ty}\;dt
 $$
 
 ----
@@ -27,7 +27,7 @@ This means that the LHS will be bounded for all $x \in \mathbb{R}$ where $m,n \i
 $$
 \begin{align*}
 \phi_0(x) &= \int_{0}^\infty \underbrace{e^{-t^2} e^{-2\pi i t x}}_{t\rightarrow\sqrt{\pi}t}\;dt\\
-&= \int_0^\infty e^{-\pi t^2} e^{-2pi i t x \sqrt{pi}} \sqrt{\pi}\;dt\\
+&= \int_0^\infty e^{-\pi t^2} e^{-2\pi i t x \sqrt{\pi}} \sqrt{\pi}\;dt\\
 &= \pi \hat{\phi}(x \sqrt{\pi}) \\
 &= \sqrt{\pi} e^{-\pi^2x^2}
 \end{align*}
