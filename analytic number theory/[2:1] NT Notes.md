@@ -137,7 +137,7 @@ $$
 &= \int_{x_0}^{x_0+1} f(t)e^{2\pi i n (t-x_0)}\;dt = e^{2\pi i n x_0} \cdot \hat{f}_n
 \end{align*}
 $$
- 
+
 
 **<u>Step 2</u>**: We can assume $f(0) = 0$. This implies that the Fourier Expansion holds for all $f$. Simply, we use $f(x) - f(0)$ to finish the proof. 
 
