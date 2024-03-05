@@ -133,3 +133,27 @@ $$
 | $\chi_1$             | 1    | -1   | -1   | 1    | 0    |
 | $\chi_2$             | 1    | $i$  | $-i$ | -1   | 0    |
 | $\chi_3$ (conjugate) | 1    | $-i$ | $i$  | -1   | 0    |
+
+---
+
+**Proposition:** Let $x$ be a non-trivial Dirichlet character of conductor $q$. Then,
+$$
+\sum_{a=1}^q \chi(a) = 0
+$$
+**Proof:** Since $\chi$ is non-trivial, there exists some $b$ inside $\left(\mathbb{Z}/q\mathbb{Z}\right)^\times$ such that $\chi(b) \neq \{0,1\}$.  Now, you take $\chi(b) \cdot \sum_{a=1}^q \chi(ab) = 0$. This allows us to have.
+$$
+\chi(b) \cdot \sum_{a=1}^q \chi(a) = \sum_{a=1}^q \chi(ab) = \sum_{a=1}^q \chi(a) \implies \chi(b) \cdot S = S \implies S = 0
+$$
+
+----
+
+**Construction (Dirichlet Characters):** How to construct $x$ of conductor $q$ for any $q > 1$. 
+
+If $q$ is odd, then we have
+$$
+\begin{align*}
+G_q &= \left(\mathbb{Z}/q\mathbb{Z}\right)^\times \text{ is a cyclic group with generator } b\\
+&= \{b, \;b^2 \text{ mod } q,\;b^3\text{ mod }q, \dots, \;b^{\phi(q)} \text{ mod }q \}
+\end{align*}
+$$
+Thus, we define $\chi(b^k) = e^{\frac{2\pi i k}{\phi(q)}}$ and $\chi(b) = e^{\frac{2\pi i }{\phi(q)}}$. 
