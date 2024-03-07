@@ -1,0 +1,71 @@
+\documentclass[8pt]{extarticle} 
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{mathabx}
+\usepackage[bottom=0.5cm, right=1.5cm, left=1.5cm, top=1.5cm, headheight=16pt]{geometry}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{cancel}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\makeatletter
+\newcases{crcases}{\quad}{%
+  \hfil$\m@th\displaystyle{##}$\hfil}{\hfil$\m@th\displaystyle{##}$}{\lbrace}{.}
+\makeatother
+\usepackage{mdframed}
+\usepackage{tikzlings}
+\usepackage{tikzducks}
+\usepackage{MnSymbol}
+\usepackage{animate}
+\usepackage{physics}
+
+
+
+\title{[Math Seminar] Brun's Combinatorial Sieve \& Twin Primes}
+\author{Connor Li, csl2192}
+\date{March 20, 2024}
+
+\newmdenv{boxedsection}
+
+\begin{document}
+
+\maketitle
+
+
+\pagebreak
+\section{Review of Sieves}
+\subsection{Overview}
+Although this is not a very detailed review, please check out Johnny and Avi's lectures that introduce the concept of sieves in the context of prime numbers. However, hopefully, this section will refresh your memory enough to follow the slightly-more complex proof for Brun's Sieve. Furthermore, please feel free to email me if you have any questions about the introductory material.
+\subsection{Terminology}
+The first few terms that we are going to define as more background terminology or general terms.
+\begin{itemize}
+    \item $\mathcal{A}, \;\mathcal{B},\; \dots$ will denote integer sequences. Generally, we want to consider only positive, finite integer sequences, but it will be defined more on a case-to-case basis for the purpose of our ``sieve''.
+    \item $\mathcal{A}_d = \left\{a \in \mathcal{A} : a \equiv 0 \mod d\right\}$. If you are familiar with group theory, it is the kernel of the homomorphism map to a set of equivalency classes $\mod d$. 
+    \item  $\mathcal{A}^z = \left\{a \in A : a \leq z\right\}$. This is the set of all elements of $\mathcal{A}$ less than some integer $z$. 
+    \begin{itemize}
+        \item $P^z = \{p_i \leq z : p_i \text{ is the }i\text{-th prime}\}$
+    \end{itemize}
+\end{itemize}
+The next few definitions are more specific.
+\begin{itemize}
+    \item $S(\mathcal{A}, \;P^z,\;x)$ is the number of elements in $\mathcal{A}^x$ that surviving the sifting process by the sequence $P^z$. Another way to think about this is the number of elements of $\mathcal{a}$ that are coprime to all primes of $P$ that are not greater than $z$. In this case, sifting is defined by some function $\sigma: \mathcal{A} \rightarrow \{0,1\}$.
+    $$
+    \sigma(n) = \begin{cases}
+        1 & n \bot \prod_{p \in \mathcal{S}^z} p\\
+        0 & \text{otherwise}
+    \end{cases}
+    $$
+    \item 
+\end{itemize}
+
+\end{document}
