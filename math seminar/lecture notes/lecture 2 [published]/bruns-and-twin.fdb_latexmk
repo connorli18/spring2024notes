@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1709839164 "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 2 [published]/bruns-and-twin.tex" "bruns-and-twin.pdf" "bruns-and-twin" 1709839165 0
-  "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 2 [published]/bruns-and-twin.tex" 1709839164 2970 dc8d4a60fdc1a167e57dcfccc92b9087 ""
+["pdflatex"] 1710538728 "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 2 [published]/bruns-and-twin.tex" "bruns-and-twin.pdf" "bruns-and-twin" 1710538729 0
+  "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 2 [published]/bruns-and-twin.tex" 1710538728 21528 f1f180e25063be902e743c97859f5bdc ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc" 1177804218 3341 78e600b269762aa2a25a5293cc4535c0 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc" 1177804218 3275 8d7166dfdbc31ffdc8aba0c31b3bd5c8 ""
@@ -75,8 +75,12 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb" 1215737283 164227 3df942b4ff2124425d8fb1b6d3e01c7a ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol5.pfb" 1177804218 232258 537a065578b4931defe0c3c7d4f4b7ce ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol6.pfb" 1177804218 228561 f013e042f586e685f4f490b0a6ea8e0a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol8.pfb" 1177804218 228273 1b9652077d8f9fdc99f210b93860040b ""
   "/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -268,12 +272,14 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1705206871 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1705206848 7883458 f6e9493ae836a2efb38410cc398d6a8b ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "bruns-and-twin.aux" 1709839165 1038 17f71ba3ecb29b36e6b487eb2e4cea8a "pdflatex"
-  "bruns-and-twin.out" 1709839165 338 7aab0b7707d9572abdfe2f094644138e "pdflatex"
-  "bruns-and-twin.tex" 1709839164 2970 dc8d4a60fdc1a167e57dcfccc92b9087 ""
+  "bruns-and-twin.aux" 1710538729 2357 0ef9f21f73e5db00e47b018e9888b2db "pdflatex"
+  "bruns-and-twin.out" 1710538729 1824 69d3f9542c34387742cf01e95f0d935f "pdflatex"
+  "bruns-and-twin.tex" 1710538728 21528 f1f180e25063be902e743c97859f5bdc ""
+  "bruns-and-twin.toc" 1710538729 1091 6545f14b60595eef0cfd1915793fb7db "pdflatex"
   (generated)
   "bruns-and-twin.aux"
   "bruns-and-twin.log"
   "bruns-and-twin.out"
   "bruns-and-twin.pdf"
+  "bruns-and-twin.toc"
   (rewritten before read)
