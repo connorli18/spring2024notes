@@ -11,7 +11,7 @@ $$
 z(s) = e^{A+Bs} \prod_{z(\rho)=0} \left(1-\frac{s}{\rho}\right) e^{\frac{s}{\rho}}
 $$
 
-We also showed that in some rectangle $R$, as shown below, we have that the $\# \left(\text{zeroes in } R\right) = \mathcal{O}(\log T)$. 
+$\chi$ We also showed that in some rectangle $R$, as shown below, we have that the $\# \left(\text{zeroes in } R\right) = \mathcal{O}(\log T)$. 
 
 <img src="/Users/connorli/Library/Application Support/typora-user-images/Screenshot 2024-03-05 at 2.46.52 PM.png" alt="Screenshot 2024-03-05 at 2.46.52 PM" style="zoom:50%;" />
 $$
