@@ -131,4 +131,4 @@ In particular, $D(x^n) = nx^{n-1}$ and $D(f^n) = n \cdot f^{n-1} D(f)$.
 $$
 D(x^q - x) = q\cdot x^{q-1} - 1 = -1 \implies (x^q - x, D(x^q - x)) = 1
 $$
-This implies that $x^q - x$ has no repeated roots.
+This implies that $x^q - x$ has no repeated roots.d
