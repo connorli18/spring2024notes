@@ -69,3 +69,4 @@ We call $\alpha$ a <u>primitive</u> with root of $1$ is $\alpha^n = 1$, but $\al
 In $\mathbb{C}$ primitive $n$-th root of $1$ is $e^{\frac{2\pi i}{n}}$ or $e^{2\pi i \frac{m}{n}}$ where $(m,n) = 1$. 
 
 - $U(\mathbb{Z}/n\mathbb{Z}) = \{i \in \mathbb{Z}/n\mathbb{Z} : (n,i) = 1\}$ since $i\alpha + n\beta = 1$ if $(n,i) = 1$ 
+- $U(\mathbb{Z}/p\mathbb{Z}) = U(\mathbb{F}_p) = \mathbb{F}_p^*$ 
