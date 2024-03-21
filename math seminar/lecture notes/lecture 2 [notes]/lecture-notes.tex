@@ -79,6 +79,25 @@ $$
 \sum_{k=0}^m (-1)^k {\ell \choose k}  = (-1)^m {\ell - 1 \choose m}
 $$
 \end{boxedsection}
+\begin{boxedsection}
+    \textbf{Proof:} We will prove this by induction. The base case is when $m = 0,1,2$. If $m = 0$, the case is trivial. If $m = 1$, then we have 
+$$
+\sum_{k=0}^1 (-1)^k {\ell \choose k} = 1 - \ell = (-1)^1 {\ell - 1 \choose 1}
+$$
+Similarly, for $m = 2$, we have the following.
+$$
+\sum_{k=0}^2 (-1)^k {\ell \choose k} = 1 - \ell + {\ell \choose 2} = \frac{(\ell-1)(\ell -2)}{2} = (-1)^2 {\ell - 1 \choose 2}
+$$
+Now, use induction on $m$. Assume the equation holds true for $m-1$, then we have
+\begin{align*}
+    \sum_{k=0}^m (-1)^k {\ell \choose k} &= \sum_{k=0}^{m-1} (-1)^k {\ell \choose k} + (-1)^m {\ell \choose m}\\
+    &= (-1)^{m-1} {\ell - 1 \choose m-1} + (-1)^m {\ell \choose m}\\
+    &= (-1)^m \left({\ell \choose m} - {\ell - 1 \choose m-1}\right)\\
+    &= (-1)^m {\ell - 1 \choose m}
+\end{align*}
+Thus, we have completed the proof.
+\end{boxedsection}
+\pagebreak
 \subsection{The Brun Sieve}
 Now, we will use the above theorem to introduce the Brun sieve as a combinatorial argument.
 \begin{boxedsection}
@@ -93,6 +112,12 @@ $$
 N_0 \geq \sum_{k=0}^m (-1)^k \sum_{|I| = k} N(I)
 $$
 \textbf{Note:} The intuition behind this formula os to provide a bound on the number of elements of $X$. If you take the properties $P_r$ to be ``being divisible by some prime,'' then we are able to construct bounds for a set $N_0$ that only consists of the prime numbers. Essentially, you should view this as a generalized method to pick and choose certain primes to construct your own set.
+\end{boxedsection}
+\begin{boxedsection}
+    Inclusion Exclusion
+$$
+N_0 \leq N -  \sum_{|I| = 1} N(I) + \sum_{|I| = 2} N(I) - \sum_{|I| = 3} N(I)  + \cdots
+$$
 \end{boxedsection}
 \begin{boxedsection}
 \textbf{Proof:} The inequalities in the theorem count the elements of $X$ as explained above. To prove the theorem, let's focus on the contribution from each individual element $x \in X$ to these inequalities.\\
@@ -114,6 +139,11 @@ It's important to note that if $\ell$ is even, then the contribution is positive
 \section{Twin Primes}
 \subsection{Introduction}
 \subsection{Precursors to Theorem}
+\begin{boxedsection}
+    \textbf{Theorem:} (Lemma $1$) For $x \geq 1$ and for any congruence class $a \text{ mod } m$, the number of positive integers not exceeding $x$ that are congruent to $a \text{ mod } m$ is $\frac{x}{m} + \theta$ where $|\theta| < 1$. \\
+    \\
+    \textbf{Proof:} Although the actual proof requires skills from Algebra, the intuition is pretty simple. If you were to divide up the integers from $1$ to $x$ into $m$ groups based on congruence classes, then each class would have $\frac{x}{m}$ elements. However, if $x$ is not divisible by $m$, then there will be a remainder $\theta$ that is less than $1$. This is the main idea behind the proof.
+\end{boxedsection}
 \begin{boxedsection}
     \textbf{Theorem:} (Lemma $2$) Let $x \geq 1$, and let $p_{i_1}, \dots p_{i_k}$ be distinct odd primes. Let $N(i_1, \dots, i_k)$ denote the number of positive integers $n \leq x$ such that
     $$

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1710604481 "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 2 [notes]/lecture-notes.tex" "lecture-notes.pdf" "lecture-notes" 1710604482 0
-  "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 2 [notes]/lecture-notes.tex" 1710604481 14517 0be677034c259367b62a9ecba0a4197e ""
+["pdflatex"] 1710946109 "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 2 [notes]/lecture-notes.tex" "lecture-notes.pdf" "lecture-notes" 1710946110 0
+  "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 2 [notes]/lecture-notes.tex" 1710946109 16259 9916d2e57b942cfaeeabbdf0e0b6caee ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc" 1177804218 3341 78e600b269762aa2a25a5293cc4535c0 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc" 1177804218 3275 8d7166dfdbc31ffdc8aba0c31b3bd5c8 ""
@@ -272,9 +272,9 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1705206871 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1705206848 7883458 f6e9493ae836a2efb38410cc398d6a8b ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "lecture-notes.aux" 1710604482 2250 9a07e9fb2eb01325be47d174ba7e8145 "pdflatex"
-  "lecture-notes.out" 1710604482 1730 dca7e68c77fecef1001d6f5b20d08f72 "pdflatex"
-  "lecture-notes.tex" 1710604481 14517 0be677034c259367b62a9ecba0a4197e ""
+  "lecture-notes.aux" 1710946110 2250 04c70f00818f533ffecf11781916cd61 "pdflatex"
+  "lecture-notes.out" 1710946110 1730 dca7e68c77fecef1001d6f5b20d08f72 "pdflatex"
+  "lecture-notes.tex" 1710946109 16259 9916d2e57b942cfaeeabbdf0e0b6caee ""
   (generated)
   "lecture-notes.aux"
   "lecture-notes.log"
