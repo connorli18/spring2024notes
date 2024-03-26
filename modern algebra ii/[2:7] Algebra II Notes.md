@@ -37,7 +37,7 @@ $$
 
 ---
 
-**Definition:** Consider some $R[x]$. We can say $g | f$ if $f \in (g) \Leftrightarrow f = hg$. Let $f_1, \dots, f_n \in F[x]$. $(f_1, \dots f_n) = (d)$ for a monic or zero $d \in F[x]$. 
+**Definition:** Consider some $R[x]$. We can say $g | f$ if $f \in (g) \iff f = hg$. Let $f_1, \dots, f_n \in F[x]$. $(f_1, \dots f_n) = (d)$ for a monic or zero $d \in F[x]$. 
 
 **Lemma:** $\forall \;d' \;|\;f_1, \dots f_n \implies d'\;|\;d$ 
 
